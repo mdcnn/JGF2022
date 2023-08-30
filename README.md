@@ -27,4 +27,12 @@ If you find our work useful for your research, please cite us:
   year={2023},
   publisher={Elsevier}
 }
+@inproceedings{zhang2023explainable,
+  title={Explainable Unfolding Network For Joint Edge-Preserving Depth Map Super-Resolution},
+  author={Zhang, Jialong and Zhao, Lijun and Zhang, Jinjing and Wang, Ke and Wang, Anhong},
+  booktitle={2023 IEEE International Conference on Multimedia and Expo (ICME)},
+  pages={888--893},
+  year={2023},
+  organization={IEEE}
+}
 ```
