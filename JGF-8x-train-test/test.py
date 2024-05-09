@@ -12,7 +12,7 @@ import scipy.io as sio
 import time
 import cv2
 
-from JGF_x8 import Net as PMBAX8
+from JGF_x8 import Net as JGF_x8_Net
 
 os.environ["CUDA_VISIBLE_DEVICES"]='0'
 
@@ -48,10 +48,10 @@ test_set = get_eval_set(os.path.join(opt.input_dir,opt.test_dataset),os.path.joi
 testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batch_size=opt.testBatchSize, shuffle=False)
 
 print('===> Building model')
-if opt.model_type == 'PMBAX8':
-    model = PMBAX8(num_channels=1, base_filter=64,  feat = 256)
+if opt.model_type == 'JGF_x8_Net':
+    model = JGF_x8_Net(num_channels=1, base_filter=64,  feat = 256)
 else:
-    model = PMBAX8(num_channels=1, base_filter=64,  feat = 256)
+    model = JGF_x8_Net(num_channels=1, base_filter=64,  feat = 256)
 
 if os.path.exists(opt.model):
     model.load_state_dict(torch.load(opt.model, map_location=lambda storage, loc: storage))
