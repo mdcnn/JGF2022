@@ -36,11 +36,11 @@ parser.add_argument('--data_dir', type=str, default='/data1/Color-Depth-DATA/wan
 parser.add_argument('--data_augmentation', type=bool, default=True)
 parser.add_argument('--hr_train_dataset', type=str, default='ptrain1000nyu-depthHR/')
 parser.add_argument('--rgb_train_dataset', type=str, default='ptrain1000nyu-color/')
-parser.add_argument('--train_dataset', type=str, default='ptrain1000nyu-depthLR8/')
+parser.add_argument('--train_dataset', type=str, default='ptrain1000nyu-depthLR16/')
 parser.add_argument('--model_type', type=str, default='JGF_x16_Net')
 parser.add_argument('--patch_size', type=int, default=256, help='Size of cropped HR image')
 parser.add_argument('--save_folder', default='./weights/x16/', help='Location to save checkpoint models')
-parser.add_argument('--prefix', default='dbpn', help='Location to save checkpoint models')
+
 opt = parser.parse_args()
 gpus_list = range(opt.gpus)
 hostname = str(socket.gethostname())
@@ -75,7 +75,7 @@ def train(epoch):
 
 
 def checkpoint(epoch):
-    model_out_path = opt.save_folder+opt.train_dataset+hostname+opt.model_type+opt.prefix+"_epoch_{}.pth".format(epoch)
+    model_out_path = opt.save_folder+opt.train_dataset+hostname+opt.model_type+"_epoch_{}.pth".format(epoch)
     torch.save(model.state_dict(), model_out_path)
     print("Checkpoint saved to {}".format(model_out_path))
 
@@ -111,7 +111,7 @@ for epoch in range(1, opt.nEpochs + 1):
         plt.xlabel('Iteration', fontsize=14)
         plt.ylabel('Loss', fontsize=14)
         plt.tick_params(axis='both', labelsize=14)
-        plt.savefig('JGFX8.png')
+        plt.savefig('JGFX16.png')
         scio.savemat('loss.mat', {'loss_list': loss_list,'epoch':epoch})
 
     if (epoch+1) == 100:
