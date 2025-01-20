@@ -15,6 +15,8 @@ Please click [here](https://drive.google.com/file/d/11k2G5QHQuoGcDJcO2DE9Gasi9t1
 ## Supplementary Material 
 [Link1](https://github.com/mdcnn/JGF2022), [Link2](https://wa01gy6lnb.feishu.cn/file/boxcn4VYBaQMnPAXwaosJy8xJjn) and [Link3](https://drive.google.com/file/d/1loGL7JBC_dCIgbQSkdlhaX8ESb3UeFPo/view?usp=sharing)
 
+##### *****Our codes are benefited from the project of [PMBANet](https://github.com/Sunbaoli/PMBANet_DSR). Thank the authors of PMBANet for sharing their codes. 
+
 ## Citation
 If you find our work useful for your research, please cite us:
 ```
@@ -34,5 +36,14 @@ If you find our work useful for your research, please cite us:
   pages={888--893},
   year={2023},
   organization={IEEE}
+}
+@article{ye2020pmbanet,
+  title={PMBANet: Progressive multi-branch aggregation network for scene depth super-resolution},
+  author={Ye, Xinchen and Sun, Baoli and Wang, Zhihui and Yang, Jingyu and Xu, Rui and Li, Haojie and Li, Baopu},
+  journal={IEEE Transactions on Image Processing},
+  volume={29},
+  pages={7427--7442},
+  year={2020},
+  publisher={IEEE}
 }
 ```
