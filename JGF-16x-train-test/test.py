@@ -28,7 +28,7 @@ parser.add_argument('--input_dir', type=str, default='/data1/Color-Depth-DATA/wa
 parser.add_argument('--output', default='Results/', help='Location to save checkpoint models')
 parser.add_argument('--test_dataset', type=str, default='TESTING449nyu-depthLR16/')
 parser.add_argument('--test_rgb_dataset', type=str, default='TESTING449nyu-color')
-parser.add_argument('--model_type', type=str, default='JGF16')
+parser.add_argument('--model_type', type=str, default='JGF_x16_Net')
 parser.add_argument('--model', default="./weights/x16/ptrain1000nyu-depthLR16/JGF_x16_Net.pth", help='sr pretrained base model')
 
 opt = parser.parse_args()
